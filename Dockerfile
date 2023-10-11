@@ -15,3 +15,9 @@ RUN apt-get update && \
 
 # Set up a working directory
 WORKDIR /app
+
+# Copy the main.py file into the image
+COPY main.py .
+
+# Set the default command to run main.py using Python 3.10
+CMD ["python3", "main.py"]
